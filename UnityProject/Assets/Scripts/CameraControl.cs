@@ -39,7 +39,7 @@ namespace KID
             posPlayer.z = Mathf.Clamp(posPlayer.z, top, bottom);
 
             //變形.座標 = 三維向量.插值(攝影機,玩家,百分比)
-            transform.position = Vector3.Lerp(posCamera, posPlayer, 0.5f);
+            transform.position = Vector3.Lerp(posCamera, posPlayer, 0.5f* Time.deltaTime*speed);
         }
     }
 }
